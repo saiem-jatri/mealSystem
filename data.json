@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "id": 0,
+      "name": "Carrots"
+    },
+    {
+      "id": 1,
+      "name": "Cabbage"
+    },
+    {
+      "id": 2,
+      "name": "Banana"
+    },
+    {
+      "id": 0,
+      "name": "Cakes"
+    }
+  ],
+  "messMembers": [
+    {
+      "name": "Shahed",
+      "age": "26",
+      "occupation": "engineer",
+      "homeTown": "Noakhali",
+      "Contact": "01736640265"
+    },
+    {
+      "name": "shahin",
+      "age": "23",
+      "occupation": "businessMan",
+      "homeTown": "rangpur",
+      "Contact": "01736640265"
+    },
+    {
+      "name": "rajib",
+      "age": "30",
+      "occupation": "writer",
+      "homeTown": "pabna",
+      "Contact": "01736640265"
+    }
+  ],
+  "shoppingList": [
+    [
+      {
+        "id":0,
+        "name": [],
+        "price": 0
+      },
+      {
+        "id":1,
+        "name": [],
+        "price": 0
+      }
+
+    ]
+  ]
+}
