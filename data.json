@@ -19,13 +19,7 @@
   ],
   "messMembers": [
     {
-      "name": "Shahed",
-      "age": "26",
-      "occupation": "engineer",
-      "homeTown": "Noakhali",
-      "Contact": "01736640265"
-    },
-    {
+      "id": "1004",
       "name": "shahin",
       "age": "23",
       "occupation": "businessMan",
@@ -33,36 +27,12 @@
       "Contact": "01736640265"
     },
     {
-      "name": "rajib",
-      "age": "30",
-      "occupation": "writer",
-      "homeTown": "pabna",
-      "Contact": "01736640265"
-    },
-    {
-      "id": 10000,
-      "name": "Shahed Ahamed",
+      "id": "1005",
+      "name": "shahin",
       "age": "23",
-      "occupassion": "jvhmngj",
-      "homeTown": "ftyjmft",
-      "contact": "ftmfy"
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 10001
-    },
-    {
-      "id": 4,
-      "name": "",
-      "age": "",
-      "occupassion": "",
-      "homeTown": "",
-      "contact": ""
+      "occupation": "businessMan",
+      "homeTown": "rangpur",
+      "Contact": "01736640265"
     }
   ],
   "shoppingList": [

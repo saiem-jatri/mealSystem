@@ -9,6 +9,9 @@ export default {
         console.log("mutation payload",payload)
         state.members =payload
     },
+    setMembersAfterDelete:(state,payloads)=>{
+        state.members = payloads
+    },
     setShoppingList: (state, payload) => {
         let add = 0;
         for (let i = 0; i< payload.name.length; i++)

@@ -3,6 +3,8 @@ import store from '../store';
 import {computed, ref, reactive} from "vue";
 
 store.dispatch('json/getAllMembers')
+store.dispatch('json/deleteMember')
+const toggler = ref(false)
 const item1 = reactive({
         name: [],
         price: 0,
@@ -35,14 +37,28 @@ const addShoppingItem = ()=>{
     console.log("===========>",payloads)
     store.dispatch('json/addShoppingData',payloads)
 }
+const testDeleteId = ref()
+const openModal =(id)=>{
+    console.log("id is=====>",id)
+    toggler.value = true
+    testDeleteId.value = id
+
+}
+
+const deletember = (id)=>{
+    console.log("delete id is",id)
+    store.dispatch('json/deleteMember',id)
+    toggler.value = false
+}
 
 </script>
 
 <template>
-    <div>
+    <div class="relative">
         <div class="grid grid-cols-2 gap-2">
             <div v-for="member in members" :key="member.Contact">
-                <div class="p-20 bg-orange-200">
+                <div class="p-20 bg-orange-200 relative">
+                    <button  @click.prevent=" openModal(member.id)" class="text-white bg-blue-800 rounded-full p-2 absolute right-1 top-2">remove</button>
                     <h3 class="text-orange-400 font-bold mb-4">{{ member.name }}</h3>
                     <div class="bg-white rounded-lg shadow-2xl md:flex">
                         <img src="https://cdn.pixabay.com/photo/2017/01/31/21/23/avatar-2027366__340.png" alt="Laptop on Desk"
@@ -63,6 +79,28 @@ const addShoppingItem = ()=>{
 
         </div>
 
+        <!-- dialougue -->
+        <div v-if="toggler" class="absolute z-20 inset-0 px-4 md:flex md:items-center md:justify-center">
+            <div class="bg-black opacity-25 w-full h-full absolute z-10 inset-0"></div>
+                <div class="bg-white rounded-lg md:max-w-md md:mx-auto p-4 fixed inset-x-0 bottom-0 z-50 mb-4 mx-4 md:relative">
+                    <div class="md:flex items-center">
+                        <div class="rounded-full border border-gray-300 flex items-center justify-center w-16 h-16 flex-shrink-0 mx-auto">
+                        <i class="bx bx-error text-3xl"></i>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:ml-6 text-center md:text-left">
+                        <p class="font-bold">Delete your account</p>
+                        <p class="text-sm text-gray-700 mt-1">You will lose all of your data by deleting your account. This action cannot be undone.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-right mt-4 md:flex md:justify-end">
+                        <button @click="deletember(testDeleteId)"  class="block w-full md:inline-block md:w-auto px-4 py-3 md:py-2 bg-red-200 text-red-700 rounded-lg font-semibold text-sm md:ml-2 md:order-2">Delete
+                            Account</button>
+                        <button @click="toggler = false" class="block w-full md:inline-block md:w-auto px-4 py-3 md:py-2 bg-gray-200 rounded-lg font-semibold text-sm mt-4
+                        md:mt-0 md:order-1">Cancel</button>
+                    </div>
+                </div>
+  </div>
         <div>
             <p>total shopping{{ count }}</p>
             <form>

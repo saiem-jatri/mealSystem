@@ -33,16 +33,16 @@ export default {
 
     },
 
-    // async deleteBlog({commit},id){
-    //     try{
-    //         const res1 = await axios.get(`http://localhost:3000/blogsData`);
-    //         const res = await axios.delete(`http://localhost:3000/blogsData/${id}`);
-    //         console.log("action id",id)
-    //         console.log("action data",res1.data)
-    //         res1.data = res1.data.filter((items) => items.id !== id)
-    //         commit('setAllBlogData', res1.data)
-    //     }catch (error){
-    //         console.log(error)
-    //     }
-    // }
+    async deleteMember({commit},id){
+        try{
+            const res1 = await axios.get(`http://localhost:3000/messMembers`);
+            const res = await axios.delete(`http://localhost:3000/messMembers/${id}`);
+            console.log("action id=========>",id)
+            console.log("action data",res1.data)
+            res1.data = res1.data.filter((items) => items.id !== id)
+            commit('setMembersAfterDelete', res1.data)
+        }catch (error){
+            console.log(error)
+        }
+    }
 }
