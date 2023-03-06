@@ -13,6 +13,7 @@ store.dispatch('json/addMembers')
 
 const addNewMember = ()=>{
     const payloads = {
+        'id':4,
         'name': name.value,
         'age': age.value,
         'occupassion': occupassion.value,

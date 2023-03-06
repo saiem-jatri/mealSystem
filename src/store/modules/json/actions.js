@@ -24,13 +24,13 @@ export default {
 
 
     async addShoppingData({commit},payload) {
-        try{
+        console.log("action payload",payload)
+
             const res = await axios.post(`http://localhost:3000/shoppingList`, payload);
-            console.log(typeof(payload))
             commit('setShoppingList', res.data)
-        } catch (error){
-            console.log(error);
-        }
+
+        console.log(res)
+
     },
 
     // async deleteBlog({commit},id){

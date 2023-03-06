@@ -11,9 +11,10 @@ export default {
     },
     setShoppingList: (state, payload) => {
         let add = 0;
-        for (let i = 0; i< payload.length; i++)
+        for (let i = 0; i< payload.name.length; i++)
             {
-            add += payload[i].price
+            add += payload.name[i].price
+                console.log(payload.name[i].price)
             }
             state.count = add
 

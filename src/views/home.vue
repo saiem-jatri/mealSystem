@@ -25,8 +25,14 @@ const count = computed(()=>{
 
 console.log("=======>",count.value)
 const addShoppingItem = ()=>{
-    const payloads = [{"name": item1.name, "price" : item1.price},{"name": item2.name, "price" : item2.price},{"name": item3.name, "price" : item3.price}]
-    console.log(payloads)
+    // const payloads = [{"name": item1.name, "price" : item1.price},{"name": item2.name, "price" : item2.price},{"name": item3.name, "price" : item3.price}]
+  const payloads = {
+    "name":[
+      {"name": item1.name, "price" : item1.price},{"name": item2.name, "price" : item2.price},{"name": item3.name, "price" : item3.price},
+    ],
+    "id":3
+  }
+    console.log("===========>",payloads)
     store.dispatch('json/addShoppingData',payloads)
 }
 
