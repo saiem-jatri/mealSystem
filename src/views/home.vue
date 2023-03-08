@@ -51,12 +51,16 @@ const deletember = (id)=>{
     toggler.value = false
 }
 
+const mem = ref('')
+const toggleBtn = ref('')
+
 </script>
 
 <template>
     <div class="relative">
         <div class="grid grid-cols-2 gap-2">
             <div v-for="member in members" :key="member.Contact">
+                {{ member.date }}
                 <div class="p-20 bg-orange-200 relative">
                     <button  @click.prevent=" openModal(member.id)" class="text-white bg-blue-800 rounded-full p-2 absolute right-1 top-2">remove</button>
                     <h3 class="text-orange-400 font-bold mb-4">{{ member.name }}</h3>
@@ -115,5 +119,24 @@ const deletember = (id)=>{
                 <button class="px-4 py-2 bg-blue-900 text-white" @click.prevent="addShoppingItem">add</button>
             </form>
         </div>
+    </div>
+{{ mem }}
+    <select v-model="mem" selected="members[0].name"  name="dropdown" id="">
+        <option  v-for="member in members" :key="member.id" :value="member.name">{{ member.name }}</option>
+    </select>
+
+    <div>
+        <div class="flex gap-x-4">
+        <button @click="toggleBtn = 'press1'">btn1</button>
+        <button @click="toggleBtn = 'press2'">btn2</button>
+        </div>
+{{ toggleBtn }}
+        <div v-if="toggleBtn =='press1'">
+                btn1dfryiagwsefgfawyr
+        </div>
+        <div v-if="toggleBtn =='press2'">
+                btn1shiuheriuhauaer
+        </div>
+
     </div>
 </template>
