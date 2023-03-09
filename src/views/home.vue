@@ -32,7 +32,7 @@ const addShoppingItem = ()=>{
     "name":[
       {"name": item1.name, "price" : item1.price},{"name": item2.name, "price" : item2.price},{"name": item3.name, "price" : item3.price},
     ],
-    "id":3
+    "id":2002
   }
     console.log("===========>",payloads)
     store.dispatch('json/addShoppingData',payloads)

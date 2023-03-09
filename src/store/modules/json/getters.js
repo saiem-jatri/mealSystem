@@ -15,5 +15,8 @@ export default{
     }),
     getFilteredHistory:((state)=>{
         return state.blogHistory
+    }),
+    getAllMeal:((state)=>{
+        return state.meal
     })
 }

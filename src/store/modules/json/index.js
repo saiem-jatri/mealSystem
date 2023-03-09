@@ -10,6 +10,7 @@ export default{
             items:[],
             members:[],
             count:'',
+            meal:[]
         }
     },
     getters,

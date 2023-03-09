@@ -25,12 +25,12 @@ export default {
 
     async addShoppingData({commit},payload) {
         console.log("action payload",payload)
-
-            const res = await axios.post(`http://localhost:3000/shoppingList`, payload);
-            commit('setShoppingList', res.data)
-
-        console.log(res)
-
+            try {
+                const res = await axios.post(`http://localhost:3000/shoppingList`, payload);
+                commit('setShoppingList', res.data)
+            }catch (error){
+                console.log(error)
+            }
     },
 
     async deleteMember({commit},id){
@@ -44,5 +44,23 @@ export default {
         }catch (error){
             console.log(error)
         }
-    }
+    },
+    async addMeal({commit},payload) {
+        try {
+            const res = await axios.post(`http://localhost:3000/meal`, payload);
+            commit('setMeal', res.data)
+            console.log(res.data)
+        }catch (error){
+            console.log(error)
+        }
+    },
+    async getAllMeals ({ commit }) {
+        try {
+            const res = await axios.get(`http://localhost:3000/meal`);
+            console.log(res.data)
+            commit('setMeal',res.data)
+        } catch (error) {
+            console.log(error);
+        }
+    },
 }

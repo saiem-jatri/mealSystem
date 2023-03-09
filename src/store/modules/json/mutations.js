@@ -33,5 +33,11 @@ export default {
     AllHistory: (state, historyId) => {
         const filteredHistory = state.blogs.find(history => history.id == historyId)
         state.blogHistory = filteredHistory
+    },
+    setMeal:(state,payload)=>{
+        console.log("mutation payload",payload)
+        // state.meal = [...state.meal, payload]
+        state.meal.push(payload)
+
     }
 }
