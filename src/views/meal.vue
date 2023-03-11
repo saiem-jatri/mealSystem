@@ -23,6 +23,13 @@ const addMeal = ()=>{
 const allMeal = computed(()=>{
   return store.getters['json/getAllMeal']
 })
+console.log("=========>",allMeal.value)
+
+// store.dispatch('json/deleteMeals')
+const deleteMeal = (id)=>{
+  console.log("id is",id);
+  store.dispatch('json/deleteMeals',id)
+}
 
 </script>
 
@@ -61,7 +68,8 @@ const allMeal = computed(()=>{
             <p class="text-sm text-black font-medium text-start">{{meal.createdAt}}</p>
             <p class="text-xl text-black font-bold text-start">{{meal.createdBy}}</p>
           <div class="flex gap-x-2 justify-start">
-              <button>View</button>
+              <router-link :to="'/meal/'+meal.id" class="bg-gray-300 px-1 rounded-sm flex gap-x-2 items-center">View <img src="../assets/icons/eye.png" class="h-4 w-4" alt=""></router-link>
+              <button @click="deleteMeal(meal.id)" class=""><img src="../assets/icons/delete.png" class="h-5 w-5" alt=""></button>
           </div>
         </div>
     </div>

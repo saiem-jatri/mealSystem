@@ -34,7 +34,6 @@ const addShoppingItem = ()=>{
     ],
     "id":2002
   }
-    console.log("===========>",payloads)
     store.dispatch('json/addShoppingData',payloads)
 }
 const testDeleteId = ref()

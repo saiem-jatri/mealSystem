@@ -18,5 +18,8 @@ export default{
     }),
     getAllMeal:((state)=>{
         return state.meal
+    }),
+    getAllSelectedMembers:((state)=>{
+        return state.selectedMembers
     })
 }

@@ -39,5 +39,20 @@ export default {
         // state.meal = [...state.meal, payload]
         state.meal.push(payload)
 
+    },
+    // setMealssAfterDelete:(state,payload) =>{
+    //     state.meal = payload
+    // }
+    setMealssAfterDelete:(state,deleteId)=>{
+      const deleteMeal = state.meal.filter (items => items.id = !deleteId)
+       state.meal = deleteMeal
+    },
+    setSelected:(state,payload)=>{
+        state.selectedMembers = payload
+    },
+
+    setSelectedMembersAfterDelete:(state,deleteId)=>{
+        const deleteSelectedMem = state.selectedMembers.filter(items => items.id = !deleteId)
+        state.selectedMembers = deleteSelectedMem
     }
 }

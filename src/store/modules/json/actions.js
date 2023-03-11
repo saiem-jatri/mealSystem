@@ -37,8 +37,6 @@ export default {
         try{
             const res1 = await axios.get(`http://localhost:3000/messMembers`);
             const res = await axios.delete(`http://localhost:3000/messMembers/${id}`);
-            console.log("action id=========>",id)
-            console.log("action data",res1.data)
             res1.data = res1.data.filter((items) => items.id !== id)
             commit('setMembersAfterDelete', res1.data)
         }catch (error){
@@ -61,6 +59,44 @@ export default {
             commit('setMeal',res.data)
         } catch (error) {
             console.log(error);
+        }
+    },
+
+    async deleteMeals({commit},id){
+        try{
+            const res = await axios.delete(`http://localhost:3000/meal/${id}`);
+            console.log("action id=========>",id)
+            commit('setMealssAfterDelete', id)
+        }catch (error){
+            console.log(error)
+        }
+    },
+    async getAllSelectedMembers ({ commit }) {
+        try {
+            const res = await axios.get(`http://localhost:3000/selectedMembers`);
+            console.log(res.data)
+            commit('setSelected',res.data)
+        } catch (error) {
+            console.log(error);
+        }
+    },
+
+    async addSelectedMembers({commit},payload) {
+        try{
+            const res = await axios.post(`http://localhost:3000/selectedMembers`, {...payload});
+            console.log("addmembers peyload",payload)
+            commit('setSelected', res.data)
+        } catch (error){
+            console.log(error);
+        }
+    },
+    async deleteSelectedMembers({commit},id){
+        try{
+            const res = await axios.delete(`http://localhost:3000/selectedMembers/${id}`);
+            console.log("action id=========>",id)
+            commit('setSelectedMembersAfterDelete', id)
+        }catch (error){
+            console.log(error)
         }
     },
 }

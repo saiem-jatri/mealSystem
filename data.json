@@ -35,13 +35,7 @@
       "Contact": "01736640265"
     },
     {
-      "id": "zKHsurE"
-    },
-    {
-      "id": "ROAT9q3"
-    },
-    {
-      "id": "qV_qZRn"
+      "id": "7gDIdDg"
     }
   ],
   "shoppingList": [
@@ -116,46 +110,29 @@
   ],
   "meal": [
     {
-      "month": "Mar 23",
-      "createdAt": "2023-03-09",
-      "createdBy": "saiem",
-      "id": 3
-    },
-    {
-      "month": "Apr 23",
-      "createdAt": "2023-03-10",
-      "createdBy": "Shahin",
-      "id": 5
-    },
-    {
-      "month": "Jun 23",
-      "createdAt": "2023-03-22",
-      "createdBy": "saiem",
-      "id": 7
-    },
-    {
-      "month": "Jul",
-      "createdAt": "2023-06-09",
-      "createdBy": "Tarif",
-      "id": 9
-    },
-    {
-      "month": "may 23",
-      "createdAt": "2023-03-16",
-      "createdBy": "Shahin",
-      "id": 11
-    },
-    {
       "month": "Jan23",
-      "createdAt": "2023-03-24",
-      "createdBy": "Tarif",
-      "id": 12
+      "createdAt": "2023-03-11",
+      "createdBy": "saiem",
+      "id": 1
     },
     {
-      "month": "Feb 24",
-      "createdAt": "2023-03-10",
+      "month": "Feb 23",
+      "createdAt": "2023-03-12",
       "createdBy": "Tarif",
-      "id": 13
+      "id": 2
+    },
+    {
+      "month": "Mar 23",
+      "createdAt": "2023-03-12",
+      "createdBy": "Shahin",
+      "id": 3
+    }
+  ],
+  "selectedMembers": [
+    {
+      "name": "saiem",
+      "email": "saiem@gmail.com",
+      "id": 1
     }
   ]
 }
