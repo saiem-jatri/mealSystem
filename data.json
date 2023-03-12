@@ -39,6 +39,9 @@
     },
     {
       "id": "UUAXKRX"
+    },
+    {
+      "id": "IjcXbdr"
     }
   ],
   "shoppingList": [
@@ -133,24 +136,57 @@
   ],
   "selectedMembers": [
     {
-      "name": "saiem",
-      "email": "saiem@gmail.com",
+      "name": "Shahed",
+      "email": "shahed@gmail.com",
+      "monthId": "1",
       "id": 1
     },
     {
-      "name": "Tarif",
-      "email": "Tarif@gmail.com",
+      "name": "saiem",
+      "email": "saiem@gmail.com",
+      "monthId": "1",
+      "id": 2
+    }
+  ],
+  "selectedMembersMeal": [
+    {
+      "name": "mem.name",
+      "breakfast": 1,
+      "lunch": 1,
+      "dinner": 1,
+      "mealId": 1,
+      "id": 1
+    },
+    {
+      "name": "saiem",
+      "breakfast": 1,
+      "lunch": 1,
+      "dinner": 1,
+      "mealId": 1,
       "id": 2
     },
     {
-      "name": "sharif",
-      "email": "sharif@gmail.com",
+      "name": "saiem",
+      "breakfast": 1,
+      "lunch": 2,
+      "dinner": 3,
+      "mealId": "",
       "id": 3
     },
     {
-      "name": "shahed",
-      "email": "shahed@gmail.com",
-      "monthId": "1",
+      "name": "Shahed",
+      "breakfast": 111,
+      "lunch": 111,
+      "dinner": 11,
+      "mealId": 0,
+      "id": 4
+    },
+    {
+      "name": "saiem",
+      "breakfast": 2,
+      "lunch": 2,
+      "dinner": 2,
+      "mealId": 1,
       "id": 5
     }
   ]

@@ -54,5 +54,10 @@ export default {
     setSelectedMembersAfterDelete:(state,deleteId)=>{
         const deleteSelectedMem = state.selectedMembers.filter(items => items.id = !deleteId)
         state.selectedMembers = deleteSelectedMem
+    },
+
+
+    setSelectedMembersMeal:(state,payload)=>{
+        state.membersMeal = payload
     }
 }

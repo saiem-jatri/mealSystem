@@ -11,7 +11,8 @@ export default{
             members:[],
             count:'',
             meal:[],
-            selectedMembers:[]
+            selectedMembers:[],
+            membersMeal:[]
         }
     },
     getters,

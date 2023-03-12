@@ -21,5 +21,8 @@ export default{
     }),
     getAllSelectedMembers:((state)=>{
         return state.selectedMembers
+    }),
+    getAllSelectedMembersMeal:((state)=>{
+        return state.membersMeal
     })
 }

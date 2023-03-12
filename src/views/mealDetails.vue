@@ -4,6 +4,7 @@ import { computed,watch } from 'vue'
 import store from '../store/index.js'
 import { ref } from 'vue'
 import TabMembers from '../components/TabMembers.vue'
+import MealCount from '../components/MealCount.vue'
 const allMeal = computed(()=>{
   return store.getters['json/getAllMeal']
 })
@@ -52,7 +53,7 @@ watch(
             </div>
             <div v-else-if="activeTab === 1">
                 <div>
-                    Mess meals
+                   <MealCount></MealCount>
                 </div>
             </div>
             <div v-if="activeTab === 2">

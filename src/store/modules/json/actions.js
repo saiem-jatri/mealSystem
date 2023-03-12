@@ -99,4 +99,14 @@ export default {
             console.log(error)
         }
     },
+
+    async addSelectedMembersMeal({commit},payload) {
+        try{
+            const res = await axios.post(`http://localhost:3000/selectedMembersMeal`, {...payload});
+            console.log("setSelectedMembersMeal peyload",payload)
+            commit('setSelectedMembersMeal', res.data)
+        } catch (error){
+            console.log(error);
+        }
+    },
 }
