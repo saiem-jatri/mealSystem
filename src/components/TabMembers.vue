@@ -1,5 +1,7 @@
 <script setup>
 import { ref,computed } from "vue";
+import { useRoute } from 'vue-router'
+const route = useRoute();
 import store from '../store';
 store.dispatch('json/getAllMembers')
 const visible = ref(false);
@@ -15,8 +17,11 @@ console.log("after selecting",selectedMembers.value)
 const addSelectedMembers = (memberName,memberEmail)=>{
     const payloads = {
         "name": memberName,
-        "email": memberEmail
+        "email": memberEmail,
+        "monthId": route.params.id
     }
+
+  console.log("==========>",route.params.id)
     store.dispatch('json/addSelectedMembers',payloads)
     visible.value = false
     memberName.value=''
@@ -25,8 +30,9 @@ const addSelectedMembers = (memberName,memberEmail)=>{
 
 store.dispatch('json/getAllSelectedMembers')
 const allSelectedMembers = computed(()=>{
-  return store.getters['json/getAllSelectedMembers']
+  return store.getters['json/getAllSelectedMembers'].filter(memberList => memberList.monthId === route.params.id)
 })
+
 
 const deleteSelectedMember= (id)=>{
     store.dispatch('json/deleteSelectedMembers',id)
