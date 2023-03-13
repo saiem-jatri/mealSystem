@@ -24,5 +24,17 @@ export default{
     }),
     getAllSelectedMembersMeal:((state)=>{
         return state.membersMeal
-    })
+    }),
+
+    getFilteredMealData:(state)=>(id)=>{
+        return state.membersMeal.filter(meals => meals.id === id)
+    }
+
+
+    // getAllSelectedMembersMeal: (state) => () => {
+    //     // console.log("getters passing id",id)
+    //     // return state.membersMeal.filter(meals => meals.mealId === id)
+    //     return state.membersMeal
+    //
+    // }
 }

@@ -42,6 +42,12 @@
     },
     {
       "id": "IjcXbdr"
+    },
+    {
+      "id": "zBsFrsy"
+    },
+    {
+      "id": "q04IF4l"
     }
   ],
   "shoppingList": [
@@ -146,15 +152,22 @@
       "email": "saiem@gmail.com",
       "monthId": "1",
       "id": 2
+    },
+    {
+      "name": "tarif",
+      "email": "tarif@gmail.com",
+      "monthId": "1",
+      "id": 3
     }
   ],
   "selectedMembersMeal": [
     {
-      "name": "mem.name",
+      "name": "Shahed",
       "breakfast": 1,
       "lunch": 1,
       "dinner": 1,
       "mealId": 1,
+      "date": "2023-03-13T09:30:11.728Z",
       "id": 1
     },
     {
@@ -162,31 +175,26 @@
       "breakfast": 1,
       "lunch": 1,
       "dinner": 1,
-      "mealId": 1,
+      "mealId": 2,
+      "date": "2023-03-13T09:30:24.185Z",
       "id": 2
     },
     {
-      "name": "saiem",
-      "breakfast": 1,
-      "lunch": 2,
-      "dinner": 3,
-      "mealId": "",
-      "id": 3
-    },
-    {
       "name": "Shahed",
-      "breakfast": 111,
-      "lunch": 111,
-      "dinner": 11,
-      "mealId": 0,
+      "breakfast": 1,
+      "lunch": 1,
+      "dinner": 1,
+      "mealId": 1,
+      "date": "2023-03-13T09:44:41.212Z",
       "id": 4
     },
     {
-      "name": "saiem",
-      "breakfast": 2,
-      "lunch": 2,
-      "dinner": 2,
-      "mealId": 1,
+      "name": "tarif",
+      "breakfast": 1,
+      "lunch": 1,
+      "dinner": 1,
+      "mealId": 3,
+      "date": "2023-03-13T10:18:30.285Z",
       "id": 5
     }
   ]

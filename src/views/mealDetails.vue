@@ -15,7 +15,6 @@ const tabValue = ref('')
 const allButtons = ref(['members','meals','expense','deposite','summary'])
 const activeTab = ref('')
 const setActiveTab = ((index)=>{
-    console.log(index);
     activeTab.value = index
 })
 
@@ -36,7 +35,7 @@ watch(
 <template>
     <div class="px-96 mt-4">
         <div class="bg-gray-200 py-2 px-2 text-xl font-semibold text-black flex justify-between items-center rounded-md">
-            <p>MOnth History of {{ filteredMeal[0].month }}</p>
+            <p>Month History of {{ filteredMeal[0].month }}</p>
           <router-link to="/meal"  class="bg-blue-700 text-white px-2 py-1 rounded-md text-center">Back</router-link>
         </div>
 
@@ -46,28 +45,28 @@ watch(
         </div>
         
 
-            <div v-if="activeTab === 0">
+            <div v-if="activeTab == 0">
                 <div>
                     <TabMembers/>
                 </div>
             </div>
-            <div v-else-if="activeTab === 1">
+            <div v-else-if="activeTab == 1">
                 <div>
-                   <MealCount></MealCount>
+                   <MealCount/>
                 </div>
             </div>
-            <div v-if="activeTab === 2">
+            <div v-if="activeTab == 2">
                 <div>
                     Mess expense
                 </div>
             </div>
-            <div v-if="activeTab === 3">
+            <div v-if="activeTab == 3">
                 <div>
                     Mess deposite
                 </div>
             </div>
 
-            <div v-if="activeTab === 4">
+            <div v-if="activeTab == 4">
                 <div>
                     Mess summary
                 </div>

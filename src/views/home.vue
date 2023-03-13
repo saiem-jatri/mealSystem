@@ -38,14 +38,12 @@ const addShoppingItem = ()=>{
 }
 const testDeleteId = ref()
 const openModal =(id)=>{
-    console.log("id is=====>",id)
     toggler.value = true
     testDeleteId.value = id
 
 }
 
 const deletember = (id)=>{
-    console.log("delete id is",id)
     store.dispatch('json/deleteMember',id)
     toggler.value = false
 }

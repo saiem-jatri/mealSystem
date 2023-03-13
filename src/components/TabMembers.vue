@@ -10,10 +10,8 @@ const members = computed(()=>{
 })
 const memberName = ref('')
 const memberEmail = ref('')
-console.log("all mem",members.value);
 
 const selectedMembers = ref([])
-console.log("after selecting",selectedMembers.value)
 const addSelectedMembers = (memberName,memberEmail)=>{
     const payloads = {
         "name": memberName,
@@ -21,7 +19,6 @@ const addSelectedMembers = (memberName,memberEmail)=>{
         "monthId": route.params.id
     }
 
-  console.log("==========>",route.params.id)
     store.dispatch('json/addSelectedMembers',payloads)
     visible.value = false
     memberName.value=''

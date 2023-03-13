@@ -4,7 +4,7 @@ export default {
     async getAllMembers ({ commit }) {
         try {
             const res = await axios.get(`http://localhost:3000/messMembers`);
-            console.log(res.data)
+
             commit('setAllMembers',res.data)
         } catch (error) {
             console.log(error);
@@ -14,7 +14,6 @@ export default {
     async addMembers({commit},payload) {
         try{
             const res = await axios.post(`http://localhost:3000/messMembers`, {...payload});
-            console.log("addmembers peyload",payload)
             commit('setNewMembers', res.data)
         } catch (error){
             console.log(error);
@@ -24,7 +23,6 @@ export default {
 
 
     async addShoppingData({commit},payload) {
-        console.log("action payload",payload)
             try {
                 const res = await axios.post(`http://localhost:3000/shoppingList`, payload);
                 commit('setShoppingList', res.data)
@@ -47,7 +45,6 @@ export default {
         try {
             const res = await axios.post(`http://localhost:3000/meal`, payload);
             commit('setMeal', res.data)
-            console.log(res.data)
         }catch (error){
             console.log(error)
         }
@@ -55,7 +52,6 @@ export default {
     async getAllMeals ({ commit }) {
         try {
             const res = await axios.get(`http://localhost:3000/meal`);
-            console.log(res.data)
             commit('setMeal',res.data)
         } catch (error) {
             console.log(error);
@@ -65,7 +61,6 @@ export default {
     async deleteMeals({commit},id){
         try{
             const res = await axios.delete(`http://localhost:3000/meal/${id}`);
-            console.log("action id=========>",id)
             commit('setMealssAfterDelete', id)
         }catch (error){
             console.log(error)
@@ -74,7 +69,6 @@ export default {
     async getAllSelectedMembers ({ commit }) {
         try {
             const res = await axios.get(`http://localhost:3000/selectedMembers`);
-            console.log(res.data)
             commit('setSelected',res.data)
         } catch (error) {
             console.log(error);
@@ -84,7 +78,6 @@ export default {
     async addSelectedMembers({commit},payload) {
         try{
             const res = await axios.post(`http://localhost:3000/selectedMembers`, {...payload});
-            console.log("addmembers peyload",payload)
             commit('setSelected', res.data)
         } catch (error){
             console.log(error);
@@ -93,7 +86,6 @@ export default {
     async deleteSelectedMembers({commit},id){
         try{
             const res = await axios.delete(`http://localhost:3000/selectedMembers/${id}`);
-            console.log("action id=========>",id)
             commit('setSelectedMembersAfterDelete', id)
         }catch (error){
             console.log(error)
@@ -109,4 +101,14 @@ export default {
             console.log(error);
         }
     },
+    async getAllSelectedMembersMeal ({ commit }) {
+        try {
+            const res = await axios.get(`http://localhost:3000/selectedMembersMeal`);
+            commit('setSelectedMembersMeal',res.data)
+        } catch (error) {
+            console.log(error);
+        }
+    },
+
+
 }

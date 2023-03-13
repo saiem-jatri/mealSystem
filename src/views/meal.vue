@@ -23,11 +23,9 @@ const addMeal = ()=>{
 const allMeal = computed(()=>{
   return store.getters['json/getAllMeal']
 })
-console.log("=========>",allMeal.value)
 
 // store.dispatch('json/deleteMeals')
 const deleteMeal = (id)=>{
-  console.log("id is",id);
   store.dispatch('json/deleteMeals',id)
 }
 
