@@ -19,35 +19,13 @@
   ],
   "messMembers": [
     {
-      "id": "1006",
-      "name": "shahed",
-      "age": "23",
-      "occupation": "businessMan",
-      "homeTown": "rangpur",
-      "Contact": "01736640265"
-    },
-    {
-      "id": "1007",
-      "name": "saiem",
-      "age": "23",
-      "occupation": "businessMan",
-      "homeTown": "rangpur",
-      "Contact": "01736640265"
-    },
-    {
-      "id": "7gDIdDg"
-    },
-    {
-      "id": "UUAXKRX"
-    },
-    {
-      "id": "IjcXbdr"
-    },
-    {
-      "id": "zBsFrsy"
-    },
-    {
-      "id": "q04IF4l"
+      "memid": 4,
+      "name": "Shahed Ahamed",
+      "age": "25",
+      "occupassion": "engineer",
+      "homeTown": "Naokhali",
+      "contact": "01736640265",
+      "id": 1
     }
   ],
   "shoppingList": [
@@ -196,6 +174,15 @@
       "mealId": 3,
       "date": "2023-03-13T10:18:30.285Z",
       "id": 5
+    },
+    {
+      "name": "Shahed",
+      "breakfast": 1,
+      "lunch": 1,
+      "dinner": 1,
+      "mealId": 1,
+      "date": "2023-03-14T06:42:42.108Z",
+      "id": 6
     }
   ]
 }

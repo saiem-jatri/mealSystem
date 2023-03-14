@@ -65,10 +65,13 @@ const toggleBtn = ref('')
                         <img src="https://cdn.pixabay.com/photo/2017/01/31/21/23/avatar-2027366__340.png" alt="Laptop on Desk"
                             class="md:w-1/3 rounded-t-lg md:rounded-l-lg md:rounded-t-none shadow-xl" />
                         <div class="p-6">
-                            <h2 class="font-bold text-xl md:text-3xl mb-2 text-orange-700">{{ member.Contact }}</h2>
+                            <h2 class="font-bold text-xl md:text-3xl mb-2 text-orange-700">{{ member.contact }}</h2>
                             <p class="text-orange-700">
-                               {{member.occupation}}
+                               {{member.occupassion}}
                             </p>
+                          <p class="text-orange-700">
+                            {{member.homeTown}}
+                          </p>
                             <p class="text-orange-700">
                                {{member.age}}
                             </p>

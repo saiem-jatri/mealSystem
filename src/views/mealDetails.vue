@@ -35,7 +35,7 @@ watch(
 <template>
     <div class="px-96 mt-4">
         <div class="bg-gray-200 py-2 px-2 text-xl font-semibold text-black flex justify-between items-center rounded-md">
-            <p>Month History of {{ filteredMeal[0].month }}</p>
+            <p>Month History of {{ filteredMeal && filteredMeal[0].month }}</p>
           <router-link to="/meal"  class="bg-blue-700 text-white px-2 py-1 rounded-md text-center">Back</router-link>
         </div>
 

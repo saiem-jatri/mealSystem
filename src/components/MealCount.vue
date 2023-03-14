@@ -24,9 +24,9 @@ const setActiveTab = ((index,id)=>{
 
 const allMemberMeal = ref('')
 watch(activeTab,(value)=>{
-   allMemberMeal.value = store.getters['json/getAllSelectedMembersMeal'].filter(mealList => mealList.mealId === value+1)
+   allMemberMeal.value = store.getters['json/getAllSelectedMembersMeal'].filter(mealList => mealList.mealId === value)
 })
-const memName = ref('')
+const selectedMember = ref('')
 const breakFast = ref('')
 const lunch = ref('')
 const dinner = ref('')
@@ -34,22 +34,23 @@ const dinner = ref('')
 
 const addMeal=()=>{
     const payload = {
-        "name":memName.value,
+        "name": selectedMember.value.name,
+        "memberId": selectedMember.value.id,
         "breakfast":breakFast.value,
         "lunch": lunch.value,
         "dinner": dinner.value,
         "mealId": activeTab.value+1,
-        "date" : new Date()
+        "date" : new Date(),
     }
 
     store.dispatch('json/addSelectedMembersMeal',payload)
 }
 </script>
 <template>
+  {{activeTab}}
     <div>
-      {{allMemberMeal}}
         <div class="flex gap-x-3 items-center w-full border border-gray-200">
-            <button :class="activeTab === index ? 'bg-blue-700 text-white':'' " v-for="(member, index) in allSelectedMembers" :key="member.id"  class="border border-gray-200 px-2 py-1" @click="setActiveTab(index)">{{ member.name }}
+            <button :class="activeTab === index + 1 ? 'bg-blue-700 text-white':'' " v-for="(member, index) in allSelectedMembers" :key="member.id"  class="border border-gray-200 px-2 py-1" @click="setActiveTab(member.id)">{{ member.name }}
             </button>
 <!--            <div v-if="activeTab == 0">-->
 <!--                    ethdryjyrdf-->
@@ -59,8 +60,8 @@ const addMeal=()=>{
 
     <div>
         <form>
-            <select v-model="memName" name="" id="">
-                <option  v-for="mem in allSelectedMembers" :key="mem.name" :value="mem.name">{{ mem.name }}</option>
+            <select v-model="selectedMember" name="" id="">
+                <option  v-for="mem in allSelectedMembers" :key="mem.name" :value="mem">{{ mem.name }}</option>
             </select>
             <input v-model="breakFast" type="number" class="text-black border border-gray-300 px-2 py-1">
             <input v-model="lunch" type="number" class="text-black border border-gray-300 px-2 py-1">
